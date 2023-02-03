@@ -1,0 +1,4 @@
+*.sqlite
+*.json
+personal
+__pycache__
