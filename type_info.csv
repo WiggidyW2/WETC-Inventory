@@ -19558,9 +19558,9 @@ type_id,group_id,category_id,name
 33856,257,16,Expedition Frigates
 33857,310,2,?InvalidName001
 33858,226,2,?InvalidName002
-33864,1285,11,Mordu’s Special Warfare Unit Operative
-33865,1286,11,Mordu’s Special Warfare Unit Specialist
-33866,1287,11,Mordu’s Special Warfare Unit Commander
+33864,1285,11,Morduâ€™s Special Warfare Unit Operative
+33865,1286,11,Morduâ€™s Special Warfare Unit Specialist
+33866,1287,11,Morduâ€™s Special Warfare Unit Commander
 33867,397,23,Thukker Component Assembly Array
 33868,1048,9,Thukker Component Assembly Array Blueprint
 33869,419,6,Brutix Serpentis Edition
@@ -25796,12 +25796,12 @@ type_id,group_id,category_id,name
 41021,1954,91,Bifrost Tronhadar Ink Serenity Only SKIN (90 Days)
 41022,1955,91,Bifrost Tronhadar Ink Serenity Only SKIN (365 Days)
 41023,280,17,Convoy Hawk 6 Escort Roster
-41024,280,17,Audio Log Backup – 115/11/11 A-0477
-41025,280,17,Audio Log Backup – 117/07/01 G-6640
-41026,280,17,Manifest – Cargo 118/01/06 – CLEARENCE 1B
+41024,280,17,Audio Log Backup â€“ 115/11/11 A-0477
+41025,280,17,Audio Log Backup â€“ 117/07/01 G-6640
+41026,280,17,Manifest â€“ Cargo 118/01/06 â€“ CLEARENCE 1B
 41027,280,17,Secure Comms Uplink ALPHA-6
-41028,280,17,Medical Report 0401A – 117/01/19
-41029,280,17,Progress Report 0466B – 117/02/28
+41028,280,17,Medical Report 0401A â€“ 117/01/19
+41029,280,17,Progress Report 0466B â€“ 117/02/28
 41030,101,18,'Excavator' Mining Drone
 41031,646,7,AML Compact Omnidirectional Tracking Link
 41032,646,7,Denny Enduring Omnidirectional Tracking Link
@@ -38267,7 +38267,7 @@ type_id,group_id,category_id,name
 60434,1090,30,Women's 'Sanguine Harvest' Pants
 60435,1089,30,Men's 'Sanguine Harvest' T-Shirt
 60436,1089,30,Women's 'Sanguine Harvest' T-Shirt
-60437,186,2,EDENCOM power generator wreck
+60437,186,2,EDENCOMÂ power generator wreck
 60438,306,11,AEGIS Logistics Center Shield Projector
 60439,310,2,Rogue Drone Outgrowth Colony
 60440,310,2,Advanced Drone Outgrowth Colony
@@ -42206,7 +42206,7 @@ type_id,group_id,category_id,name
 75390,227,2,FW Complex Small NVY-5 Attacker Spawner ( DO NOT TRANSLATE )
 75391,227,2,FW Complex Medium NVY-5 Attacker Spawner ( DO NOT TRANSLATE )
 75392,227,2,FW Complex Large NVY-5 Attacker Spawner ( DO NOT TRANSLATE )
-75393,227,2,FW Complex Small ADV-1 Attacker  Spawner ( DO NOT TRANSLATE )
+75393,227,2,FW Complex Small ADV-1 AttackerÂ  Spawner ( DO NOT TRANSLATE )
 75394,227,2,FW Complex Medium ADV-1 Attacker Spawner ( DO NOT TRANSLATE )
 75395,227,2,FW Complex Large ADV-1 Attacker Spawner ( DO NOT TRANSLATE )
 75396,227,2,FW Complex Small ADV-5 Attacker Spawner ( DO NOT TRANSLATE )
@@ -44337,8 +44337,8 @@ type_id,group_id,category_id,name
 367456,351064,350001,'Jotunn' Sentinel M-I+
 367457,351064,350001,'Enkidu' Sentinel G-I+
 367472,350858,350001,Militia Flaylock Pistol
-367477,350858,350001,Kubo’s GMK-16 Plasma Cannon
-367489,350858,350001,Beacon’s ELI-74 Swarm Launcher
+367477,350858,350001,Kuboâ€™s GMK-16 Plasma Cannon
+367489,350858,350001,Beaconâ€™s ELI-74 Swarm Launcher
 367499,367487,350001,Skill Tree Reset and Refund
 367500,350858,350001,Symb's FORK-5 Sniper Rifle
 367502,350858,350001,Agimus' Modified AGO-56 Mass Driver
@@ -44346,7 +44346,7 @@ type_id,group_id,category_id,name
 367517,350858,350001,Kalante's RXS-05 Assault Rifle
 367519,350858,350001,Ghalag's Modified MRT-17 Rail Rifle
 367528,350858,350001,Darth's GIO-66 Scrambler Rifle
-367541,350858,350001,Viktor’s NEG-1 Laser Rifle
+367541,350858,350001,Viktorâ€™s NEG-1 Laser Rifle
 367548,350858,350001,Alex's Modified ZX-030 Heavy Machine Gun
 367549,350858,350001,Alldin's IMP-10 Forge Gun
 367552,350858,350001,Bons' SIN-7 Shotgun
@@ -44565,7 +44565,7 @@ type_id,group_id,category_id,name
 368755,368726,350001,Heavy Amarr SKIN - Yellow
 368756,368726,350001,Light Gallente SKIN - Green
 368776,368726,350001,Medium Minmatar SKIN - Quafe
-368777,351121,350001,Krin’s LEX -71 Damage Modifier
+368777,351121,350001,Krinâ€™s LEX -71 Damage Modifier
 368880,351210,350001,Marduk G-I
 368881,351210,350001,Madrugar G/1
 368882,351210,350001,Madrugar Gv.0
@@ -44747,6 +44747,6 @@ type_id,group_id,category_id,name
 369549,351064,350001,'Dorudon' Basic-H M/I
 369550,351064,350001,'Loceros' Basic-H mk.0
 370308,368726,350001,'Deathshroud' AM-M SKIN
-370488,368726,350001,‘Tairei’s Crimson’ AM-L SKIN
+370488,368726,350001,â€˜Taireiâ€™s Crimsonâ€™ AM-L SKIN
 370658,351844,350001,Council's Modified Repair Tool
 371027,350858,350001,X-MS16 Snowball Launcher
