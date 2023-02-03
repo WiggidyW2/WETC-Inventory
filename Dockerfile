@@ -1,9 +1,11 @@
-FROM alphine
+FROM alpine
 
 LABEL maintainer="wiggidy" mail="wiggidy@riseup.net"
 LABEL description="Python script that scrapes ESI for corp asset information and updates a Google Spreadsheet with said assets"
 
-RUN apk add --no-cache python3 \
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
  && pip3 install --no-cache-dir \
     gspread \
     esipy
