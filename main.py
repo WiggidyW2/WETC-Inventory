@@ -2,6 +2,8 @@ import db
 import esi
 
 import sqlite3
+import json
+import os
 
 import gspread
 
@@ -370,8 +372,20 @@ def download_orders(client, region_id, location_id, kind):
 		except sqlite3.IntegrityError:
 			pass
 
+def service_account_from_env():
+	raw_json = os.environ.get('GAUTH')
+	if raw_json is None:
+		raise Exception("Unable to find GAUTH environment variable")
+	gauth = json.load(raw_json)
+	service = gspread.service_account_from_dict(gauth)
+	return service
+
 def main():
-	service = gspread.service_account(filename=SHEETS_SERVICE_KEY_PATH)
+	service = None
+	try:
+		service = gspread.service_account(filename=SHEETS_SERVICE_KEY_PATH)
+	except FileNotFoundError:
+		service = service_account_from_env()
 	sheet = service.open(CONFIG_SHEET)
 
 	client_id, secret_key, callback_url, user_agent, refresh_token, corporation_id = get_esi_config(sheet)
