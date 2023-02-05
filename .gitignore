@@ -1,4 +1,6 @@
 *.sqlite
+*.sqlite-journal
 *.json
+debug_assets.csv
 personal
 __pycache__
