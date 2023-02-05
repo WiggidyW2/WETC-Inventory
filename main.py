@@ -412,7 +412,7 @@ def main():
 
 	raw_items = client.get_corporation_assets(corporation_id)
 	items, containers, offices = parse_raw_items(raw_items)
-	insert_items(items, containers, offices, locations)
+	insert_items(items, containers, offices, locations, f)
 
 	sheet = service.open(INVENTORY_SHEET)
 	update_worksheets(sheet, locations)
