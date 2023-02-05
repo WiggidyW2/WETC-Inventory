@@ -56,7 +56,8 @@ HANGARS = {
 }
 CONTAINER_FLAGS = [
 	"Unlocked",
-	"Locked"
+	"Locked",
+	"AutoFit"
 ]
 
 FAILURE = False
@@ -412,7 +413,7 @@ def main():
 
 	raw_items = client.get_corporation_assets(corporation_id)
 	items, containers, offices = parse_raw_items(raw_items)
-	insert_items(items, containers, offices, locations, f)
+	insert_items(items, containers, offices, locations)
 
 	sheet = service.open(INVENTORY_SHEET)
 	update_worksheets(sheet, locations)
