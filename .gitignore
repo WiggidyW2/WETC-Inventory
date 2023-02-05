@@ -3,5 +3,6 @@
 *.json
 test.py
 debug_assets.csv
+debug_assets_2.csv
 personal
 __pycache__
