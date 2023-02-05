@@ -1,6 +1,7 @@
 *.sqlite
 *.sqlite-journal
 *.json
+test.py
 debug_assets.csv
 personal
 __pycache__
