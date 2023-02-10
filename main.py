@@ -4,6 +4,7 @@ import esi
 
 import sqlite3
 import json
+import copy
 import os
 
 import gspread
@@ -163,6 +164,7 @@ class Category:
 			return FAILURE
 
 	def add(self, item):
+		item = copy.copy(item)
 		if item.type_id in self.items:
 			self.items[item.type_id].quantity += item.quantity
 		else:
@@ -181,19 +183,26 @@ class Location:
 	def try_add(self, item):
 		if item.location_id == self.location_id:
 			if item.location_flag in self.enabled_flags:
+				result = FAILURE
 				for category in self.categories:
-					result = category.try_add_by_type_id(item)
-					if result == SUCCESS:
-						return SUCCESS
+					new_result = category.try_add_by_type_id(item)
+					if new_result == SUCCESS:
+						result = SUCCESS
+				if result == SUCCESS:
+					return SUCCESS
 				item.set_ids()
 				for category in self.categories:
-					result = category.try_add_by_group_id(item)
-					if result == SUCCESS:
-						return SUCCESS
+					new_result = category.try_add_by_group_id(item)
+					if new_result == SUCCESS:
+						result = SUCCESS
+				if result == SUCCESS:
+					return SUCCESS
 				for category in self.categories:
-					result = category.try_add_by_category_id(item)
-					if result == SUCCESS:
-						return SUCCESS
+					new_result = category.try_add_by_category_id(item)
+					if new_result == SUCCESS:
+						result = SUCCESS
+				if result == SUCCESS:
+					return SUCCESS
 		return FAILURE
 
 def parse_db_price(price):
