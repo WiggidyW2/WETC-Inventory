@@ -3,6 +3,7 @@ import db
 import esi
 
 import sqlite3
+import time
 import json
 import copy
 import os
@@ -339,7 +340,12 @@ def insert_categories(sheet, locations, type_ids, group_ids, category_ids):
 
 def insert_into_worksheet(worksheet, data):
 	worksheet.clear()
-	worksheet.update('A1', data)
+	try:
+		worksheet.update('A1', data)
+	except gspread.exceptions.APIError as e:
+		if e.get('code', 0) == 429:
+			time.sleep(60)
+			insert_into_worksheet(worksheet, data)
 
 def update_worksheets(sheet, locations):
 	for location in locations:
@@ -420,7 +426,20 @@ def main():
 	category_ids = get_idents(sheet, CATEGORY_ID_WS)
 	insert_categories(sheet, locations, type_ids, group_ids, category_ids)
 
+	# for location in locations:
+	# 	print("Location: {}".format(location.name))
+	# 	for category in location.categories:
+	# 		print("Category: {}".format(category.name))
+	# 		for category_id in category.category_ids:
+	# 			print("Category: {}".format(category_id))
+	# 		for group_id in category.group_ids:
+	# 			print("Group: {}".format(group_id))
+	# 		for type_id in category.type_ids:
+	# 			print("Type: {}".format(type_id))
+
 	raw_items = client.get_corporation_assets(corporation_id)
+	# if len(raw_items) < 15:
+	# 	print(raw_items)
 	items, containers, offices = parse_raw_items(raw_items)
 	insert_items(items, containers, offices, locations)
 

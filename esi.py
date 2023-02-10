@@ -30,6 +30,8 @@ class Client:
 			corporation_id=corporation_id,
 		)
 		rep = self.esi_client.head(op)
+		if rep.status != 200:
+			raise Exception("Unable to obtain assets, code: {}".format(rep.status))
 		num_pages = rep.header['X-Pages'][0]
 		ops = []
 		for page in range(1, num_pages + 1):
@@ -50,6 +52,8 @@ class Client:
 			region_id=region_id,
 		)
 		rep = self.esi_client.head(op)
+		if rep.status != 200:
+			raise Exception("Unable to obtain market orders, code: {}".format(rep.status))
 		num_pages = rep.header['X-Pages'][0]
 		ops = []
 		for page in range(1, num_pages + 1):
