@@ -356,7 +356,9 @@ def update_worksheets(sheet, locations):
 				category.price_kind,
 			)
 			data = [["Name", "Quantity", "1x " + price_string, "All " + price_string]]
-			for item in category.items.values():
+			items = [item for item in category.items.values()]
+			items.sort(key=lambda i: i.type_name())
+			for item in items:
 				item_name = item.type_name()
 				item_quantity = item.quantity
 				item_price = item.price(category.price_market, category.price_kind, category.price_multiplier)
