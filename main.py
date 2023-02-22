@@ -395,7 +395,7 @@ def service_account_from_env():
 	raw_json = os.environ.get('GAUTH')
 	if raw_json is None:
 		raise Exception("Unable to find GAUTH environment variable")
-	gauth = json.load(raw_json)
+	gauth = json.loads(raw_json)
 	service = gspread.service_account_from_dict(gauth)
 	return service
 
