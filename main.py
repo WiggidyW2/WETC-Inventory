@@ -238,8 +238,13 @@ def insert_items(items, containers, offices, locations):
 	for item in items:
 		flatten_location(item, containers, offices)
 		for location in locations:
-			result = location.try_add(item)
-			if result == SUCCESS:
+			try:
+				result = location.try_add(item)
+				if result == SUCCESS:
+					break
+			except Exception as e:
+				print(item.type_id)
+				print(e)
 				break
 
 def get_esi_config(sheet):
